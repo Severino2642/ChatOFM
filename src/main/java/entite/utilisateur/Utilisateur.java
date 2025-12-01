@@ -1,23 +1,23 @@
 package entite.utilisateur;
 
-import mg.Annotation.Colonne;
+/*import mg.Annotation.Colonne;
 import mg.Annotation.Table;
 import mg.Utils.Dao;
 
-import java.sql.Connection;
+import java.sql.Connection;*/
 import java.sql.Timestamp;
 
-@Table
-public class Utilisateur extends Dao {
-    @Colonne(isPK = true)
+//@Table
+public class Utilisateur /*extends Dao*/ {
+//    @Colonne(isPK = true)
     String id;
-    @Colonne
+//    @Colonne
     String pseudo;
-    @Colonne
+//    @Colonne
     String identifiant;
-    @Colonne
+//    @Colonne
     String mdp;
-    @Colonne
+//    @Colonne
     Timestamp date;
 
     public Utilisateur() {
