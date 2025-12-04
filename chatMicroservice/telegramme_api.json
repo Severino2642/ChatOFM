@@ -1,0 +1,58 @@
+{
+  "info": {
+    "_postman_id": "b7f8f9d4-0e64-4f89-a7b5-telegram-api-001",
+    "name": "Telegram Microservice API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "chatgpt-fastapi-telegram"
+  },
+  "item": [
+    {
+      "name": "Send Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"phone\": \"+261341234567\",\n    \"message\": \"Bonjour depuis Postman !\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/send-message",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["send-message"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listen From Number",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"phone\": \"+261341234567\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/listen-from-number",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["listen-from-number"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
