@@ -1,4 +1,4 @@
-package controller;
+package controler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;

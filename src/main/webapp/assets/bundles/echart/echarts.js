@@ -48090,7 +48090,7 @@
         _resetController: function (api) {
             var controller = this._controller;
 
-            // Init controller.
+            // Init controler.
             if (!controller) {
                 controller = this._controller = new RoamController(api.getZr());
                 controller.enable(this.seriesModel.get('roam'));
@@ -69999,7 +69999,7 @@
             );
 
             box(
-                // Buttons in controller are layout always horizontally.
+                // Buttons in controler are layout always horizontally.
                 'horizontal',
                 controllerGroup,
                 legendModel.get('pageButtonItemGap', true)
@@ -70023,17 +70023,17 @@
             // Place containerGroup and controllerGroup and contentGroup.
             if (showController) {
                 var pageButtonPosition = legendModel.get('pageButtonPosition', true);
-                // controller is on the right / bottom.
+                // controler is on the right / bottom.
                 if (pageButtonPosition === 'end') {
                     controllerPos[orientIdx] += maxSize[wh] - controllerRect[wh];
                 }
-                // controller is on the left / top.
+                // controler is on the left / top.
                 else {
                     containerPos[orientIdx] += controllerRect[wh] + pageButtonGap;
                 }
             }
 
-            // Always align controller to content as 'middle'.
+            // Always align controler to content as 'middle'.
             controllerPos[1 - orientIdx] += contentRect[hw] / 2 - controllerRect[hw] / 2;
 
             contentGroup.attr('position', contentPos);
@@ -70062,7 +70062,7 @@
                 containerGroup.__rectSize = clipShape[wh];
             }
             else {
-                // Do not remove or ignore controller. Keep them set as place holders.
+                // Do not remove or ignore controler. Keep them set as place holders.
                 controllerGroup.eachChild(function (child) {
                     child.attr({ invisible: true, silent: true });
                 });
@@ -70073,7 +70073,7 @@
             pageInfo.pageIndex != null && updateProps(
                 contentGroup,
                 { position: pageInfo.contentPosition },
-                // When switch from "show controller" to "not show controller", view should be
+                // When switch from "show controler" to "not show controler", view should be
                 // updated immediately without animation, otherwise causes weird efffect.
                 showController ? legendModel : false
             );
@@ -74893,7 +74893,7 @@
     });
 
     function updateController(brushModel, ecModel, api, payload) {
-        // Do not update controller when drawing.
+        // Do not update controler when drawing.
         (!payload || payload.$from !== brushModel.id) && this._brushController
             .setPanels(brushModel.brushTargetManager.makePanelOpts(api))
             .enableBrush(brushModel.brushOption)
@@ -78783,8 +78783,8 @@
     * under the License.
     */
 
-    // Only create one roam controller for each coordinate system.
-    // one roam controller might be refered by two inside data zoom
+    // Only create one roam controler for each coordinate system.
+    // one roam controler might be refered by two inside data zoom
     // components (for example, one for x and one for y). When user
     // pan or zoom, only dispatch one action for those data zoom
     // components.
@@ -78886,7 +78886,7 @@
     }
 
     /**
-     * Key: coordId, value: {dataZoomInfos: [], count, controller}
+     * Key: coordId, value: {dataZoomInfos: [], count, controler}
      * @type {Array.<Object>}
      */
     function giveStore(api) {
@@ -80117,7 +80117,7 @@
                     var itemSize = this.itemSize;
                     var visuals = controller[state];
 
-                    // Set inactive color for controller if no other color
+                    // Set inactive color for controler if no other color
                     // attr (like colorAlpha) specified.
                     if (!visuals) {
                         visuals = controller[state] = {
@@ -80561,7 +80561,7 @@
          * @param {string=} visualCluster Only can be 'color' 'opacity' 'symbol' 'symbolSize'
          * @param {Object} [opts]
          * @param {string=} [opts.forceState] Specify state, instead of using getValueState method.
-         * @param {string=} [opts.convertOpacityToAlpha=false] For color gradient in controller widget.
+         * @param {string=} [opts.convertOpacityToAlpha=false] For color gradient in controler widget.
          * @return {*} Visual value.
          */
         getControllerVisual: function (targetValue, visualCluster, opts) {
@@ -81671,9 +81671,9 @@
             maxOpen: false,             // Whether include values that bigger than `max`.
 
             align: 'auto',              // 'auto', 'left', 'right'
-            itemWidth: 20,              // When put the controller vertically, it is the length of
+            itemWidth: 20,              // When put the controler vertically, it is the length of
             // horizontal side of each item. Otherwise, vertical side.
-            itemHeight: 14,             // When put the controller vertically, it is the length of
+            itemHeight: 14,             // When put the controler vertically, it is the length of
             // vertical side of each item. Otherwise, horizontal side.
             itemSymbol: 'roundRect',
             pieceList: null,            // Each item is Object, with some of those attrs:
